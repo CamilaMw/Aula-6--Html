@@ -1,0 +1,88 @@
+body{
+    margin: 0;
+    background-image: url("../imagens/mane.jpg");
+    background-repeat: no-repeat;
+    background-position: right top;
+    margin-right: 250px;
+    background-attachment: fixed;
+}
+
+ul{
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    width: 25%;
+    background-color: #FFFFFF;
+    position: fixed;
+    height: 100%;
+    overflow: auto;
+}
+
+li a{
+    display: block;
+    color: black;
+    padding: 8px 16px; 
+    text-decoration: none;
+}
+
+li a.active{
+    background-color: #4caf50;
+    color: white;
+}
+
+li a:hover:not(a.active){
+    background-color: #555555;
+}
+
+section{
+    margin-left: 25%;
+    padding: 1px 16px;
+    height: 1000px;
+}
+article{
+    /* border-style: solid;
+    border-color: red;
+    border-width: 2px; */
+
+    border: 2px solid rgb(0,0,0);
+    width: 200px;
+    height: 200px;
+    position:absolute;
+}
+article#art1{
+    background-color: hotpink;
+    left: 100px;
+    top: 100px;
+    z-index: 2;
+}
+article#art2{
+    background-color: blue;
+    left: 150px;
+    top: 150px;
+    z-index: 1;
+}
+.container{
+    margin-left: 1%;
+    background-color: pink;
+    display: flex;
+    flex-flow: row wrap;
+}
+.container>article{
+    border: 2px solid rgb(139, 248, 37);
+    position: relative;
+    width: 100px;
+    height: 100px;
+}
+@media screen and (max-width: 500px){
+    .container{
+        justify-content: space-evenly;
+        flex-flow: column wrap;
+    }
+    .container>article{
+        border: 2px solid rgb(37, 76, 248);
+        position: relative;
+        width: 50px;
+        height: 50px;
+    }
+
+}
